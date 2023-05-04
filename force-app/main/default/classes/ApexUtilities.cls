@@ -6,7 +6,7 @@ public with sharing class ApexUtilities {
     System.debug('User ProfileId ' + UserInfo.getProfileId());
     //Profile profileRec = [select id,Name from Profile where id = :UserInfo.getProfileId() with USER_MODE];
     String profileName = [
-      SELECT id, Name
+      SELECT id, Name, Industry, Rating
       FROM Profile
       WHERE id = :UserInfo.getProfileId()
       WITH USER_MODE
