@@ -1,12 +1,12 @@
 public with sharing class ApexUtilities {
   public static void userInfoDemo() {
-    System.debug('Username ' + UserInfo.getUserName());
+    System.debug('Username value' + UserInfo.getUserName());
     System.debug('User Id ' + UserInfo.getUserId());
     System.debug('User Email ' + UserInfo.getUserEmail());
     System.debug('User ProfileId ' + UserInfo.getProfileId());
     //Profile profileRec = [select id,Name from Profile where id = :UserInfo.getProfileId() with USER_MODE];
     String profileName = [
-      SELECT id, Name, Industry, Rating
+      SELECT id, Name, Industry, Rating, AnnaulRevenue
       FROM Profile
       WHERE id = :UserInfo.getProfileId()
       WITH USER_MODE

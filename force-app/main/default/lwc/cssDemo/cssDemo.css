@@ -1,0 +1,14 @@
+p {
+  color: red;
+  font-size: 20px;
+}
+
+.lwc {
+  color: blueviolet;
+  font-size: large;
+}
+
+.lwc:hover {
+  color: rgb(29, 199, 32);
+  font-size: larger;
+}

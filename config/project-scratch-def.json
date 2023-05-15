@@ -1,13 +1,20 @@
 {
-  "orgName": "Demo company",
-  "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "orgName": "Everge Training",
+  "edition": "Enterprise",
+  "hasSampleData": true,
+  "features": ["Communities", "ServiceCloud"],
   "settings": {
-    "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
     },
     "mobileSettings": {
-      "enableS1EncryptedStoragePref2": false
+      "enableS1EncryptedStoragePref2": true
+    },
+    "omniChannelSettings": {
+      "enableOmniChannel": true
+    },
+    "caseSettings": {
+      "systemUserEmail": "support@acme.com"
     }
   }
 }

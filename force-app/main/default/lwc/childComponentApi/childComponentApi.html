@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="API Decorator" icon-name="custom:custom14">
+    <p class="slds-var-m-around_medium">{message}</p>
+    <div class="slds-var-m-around_small">User Details</div>
+    <div class="slds-var-m-around_small">UserName : {userdetail.username}</div>
+    <div class="slds-var-m-around_small">
+      email :
+      <lightning-formatted-email
+        value={userdetail.email}
+      ></lightning-formatted-email>
+    </div>
+    <div class="slds-var-m-around_small">{inputFromParent}</div>
+    <div class="slds-var-m-around_small">{showMe}</div>
+    <p class="slds-var-m-around_small">{dateTimeDetails}</p>
+  </lightning-card>
+</template>

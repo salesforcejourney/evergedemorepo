@@ -1,0 +1,27 @@
+<template>
+  <lightning-card title="Track Decorator" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <p>UserName : {userDetail.username}</p>
+      <lightning-formatted-email
+        value={userDetail.useremail}
+      ></lightning-formatted-email>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Change Email Address"
+        onclick={clickHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <template for:each={toDoTask} for:item="todoItem">
+        <p key={todoItem} class="slds-var-m-around_small">{todoItem}</p>
+      </template>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Add New To Do task"
+        onclick={addTaskHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

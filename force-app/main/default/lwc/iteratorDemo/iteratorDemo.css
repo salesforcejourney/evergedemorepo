@@ -1,0 +1,7 @@
+.borderTop {
+  border-top: 5px solid red;
+}
+
+.borderBottom {
+  border-bottom: 5px dotted blue;
+}

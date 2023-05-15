@@ -1,0 +1,42 @@
+<template>
+  <lightning-card title="Validate User Input" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Account Name"
+        required="true"
+        min-length="2"
+        max-length="50"
+        message-when-value-missing="Account Name is Mandatory"
+        message-when-too-short="Account minimum length is of 2 char"
+        message-when-too-long="Account maximum length is of 50 char"
+      ></lightning-input>
+      <lightning-input
+        type="email"
+        label="Email"
+        message-when-type-mismatch="Please enter email in valid format"
+        class="compemail"
+      ></lightning-input>
+      <lightning-input
+        type="tel"
+        label="Phone"
+        pattern="^(\+91|\+91\-|0)?[789]\d{9}$"
+        message-when-pattern-mismatch="Please enter phone in valid format"
+      ></lightning-input>
+      <lightning-input
+        type="number"
+        label="Age"
+        min="18"
+        max="60"
+        message-when-range-underflow="Minimum age must be 18"
+        message-when-range-overflow="Maximum age must be 60"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Validate Input"
+        variant="brand"
+        onclick={clickHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

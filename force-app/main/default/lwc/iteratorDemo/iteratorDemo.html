@@ -1,0 +1,36 @@
+<template>
+  <lightning-card
+    title="For Each - Primitive Array"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <template for:each={cars} for:item="cardetail">
+        <p key={cardetail}>{cardetail}</p>
+      </template>
+    </div>
+  </lightning-card>
+  <lightning-card
+    title="For Each - Array of Objects"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <template for:each={contacts} for:item="contact">
+        <p key={contact.id}>{contact.ceo} - {contact.company}</p>
+      </template>
+    </div>
+  </lightning-card>
+  <lightning-card
+    title="Iterator - Array of Objects"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <template iterator:it={contacts}>
+        <div key={it.value.id}>
+          <div lwc:if={it.first} class="borderTop"></div>
+          {it.value.ceo} - {it.value.company}
+          <div lwc:if={it.last} class="borderBottom"></div>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

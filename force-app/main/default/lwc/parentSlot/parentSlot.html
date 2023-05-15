@@ -1,0 +1,19 @@
+<template>
+  <lightning-card title="Slot Demo" icon-name="custom:custom25">
+    <div class="slds-var-m-around_small">
+      <c-child-slot>
+        <p slot="username">My Name is Ankit</p>
+        <p slot="experience">My Area of expertise is Salesforce</p>
+        <div slot="calculator">
+          <c-lwc-calculator></c-lwc-calculator>
+        </div>
+      </c-child-slot>
+    </div>
+    <div class="slds-var-m-around_small">
+      <c-child-slot>
+        <p slot="username">My Name is Sachin</p>
+        <p slot="experience">My Area of expertise is Cricket</p>
+      </c-child-slot>
+    </div>
+  </lightning-card>
+</template>

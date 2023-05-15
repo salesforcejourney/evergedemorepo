@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="Parent Component" icon-name="custom:custom15">
+    <lightning-button
+      label="Old Approach - Refresh Date and Time"
+      variant="brand"
+      onclick={oldclickHandler}
+    ></lightning-button>
+    <lightning-button
+      label="New Approach - Refresh Date and Time"
+      variant="brand"
+      onclick={newclickHandler}
+      class="slds-var-p-around_small"
+    ></lightning-button>
+  </lightning-card>
+
+  <c-child-component-api
+    message="Welcome to Learn LWC"
+    userdetail={userObj}
+    input-from-parent="We are learning API decorators"
+    show-me
+    lwc:ref="childcomp"
+  ></c-child-component-api>
+</template>

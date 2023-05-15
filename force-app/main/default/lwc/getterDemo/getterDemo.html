@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Getter Demo" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Firstname"
+        name="fname"
+        onchange={changeHandler}
+      ></lightning-input>
+      <lightning-input
+        label="Lastname"
+        name="lname"
+        onchange={changeHandler}
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">{fullName}</div>
+  </lightning-card>
+</template>

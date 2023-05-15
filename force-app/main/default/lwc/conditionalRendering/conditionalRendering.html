@@ -1,0 +1,30 @@
+<template>
+  <lightning-card title="Conditional Rendering" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        type="checkbox"
+        label="Show User Details"
+        checked={showUserDetails}
+        onchange={changeHandler}
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <!--Legacy Approach-->
+      <template if:true={showUserDetails}>
+        <p>UserName : 'ankitjain'</p>
+        <p>Password : ankitjain</p>
+      </template>
+      <template if:false={showUserDetails}>
+        <p>You are not authorized</p>
+      </template>
+      <!--Recommended Approach-->
+      <template lwc:if={showUserDetails}>
+        <p>UserName : 'ankitjain'</p>
+        <p>Password : ankitjain</p>
+      </template>
+      <template lwc:else>
+        <p>You are not authorized</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>
