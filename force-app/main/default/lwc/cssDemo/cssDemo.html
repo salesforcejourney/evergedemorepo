@@ -47,4 +47,96 @@
       </div>
     </div>
   </lightning-card>
+  <lightning-card title="Design Token" icon-name="custom:custom14">
+    <div class="slds-var-p-around_small">
+      <p class="designTokenDemo">Welcome to learn LWC</p>
+    </div>
+  </lightning-card>
+  <lightning-card title="Aura Design Token" icon-name="custom:custom14">
+    <!--
+      Prerequisite : Setup ==> Devloper Console ==> File ==> New ==> Lightning Token ==> name of token : defaultTokens
+
+      <aura:tokens>
+	      <aura:token name="myBackGroundColor" value="#ff9966"></aura:token>
+	     <aura:token name="myTextColor" value="#d24dff"></aura:token>
+     </aura:tokens>
+
+    -->
+    <div class="slds-var-p-around_small">
+      <p class="auraDesignTokenDemo">Welcome to learn LWC</p>
+    </div>
+  </lightning-card>
+  <lightning-card title="Style Hooks" icon-name="custom:custom14">
+    <div class="slds-var-p-around_small">
+      <lightning-button
+        class="styleHookDemo"
+        label="Click Me"
+        variant="brand"
+      ></lightning-button>
+    </div>
+  </lightning-card>
+  <lightning-card title="Dynamic CSS" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <h2>Welcome to learn LWC</h2>
+      <!--no css class-->
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        class="slds-var-p-around_small"
+        label="Add Class"
+        onclick={addClassHandler}
+      ></lightning-button>
+      <lightning-button
+        class="slds-var-p-around_small"
+        label="Remove Class"
+        onclick={removeClassHandler}
+      ></lightning-button>
+    </div>
+
+    <div class="slds-var-m-around_small">
+      <h3 class="slds-text-title_caps">Welcome to learn LWC</h3>
+      <!--one or more than one css class is present-->
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        class="slds-var-p-around_small"
+        label="Add Class"
+        onclick={addListClassHandler}
+      ></lightning-button>
+      <lightning-button
+        class="slds-var-p-around_small"
+        label="Remove Class"
+        onclick={removeListClassHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <div class="slds-var-m-around_small">
+        <h4 class={cssProperty}>Apply CSS Based on property</h4>
+      </div>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        type="number"
+        label="Percentage"
+        onchange={changeHandler}
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <div style={percentage}>Apply Styling using getter</div>
+    </div>
+  </lightning-card>
+  <lightning-card title="Shared CSS" icon-name="custom:custom14">
+    <!--Created the cssLibrary component : deleted the .html and .js file and keep .css file-->
+    <!--in css file of cssDemo : @import 'c/cssLibrary'-->
+    <div class="slds-var-p-around_small">
+      <div class="wrapper">
+        <div class="skills cssskill">CSS 80%</div>
+      </div>
+    </div>
+    <div class="slds-var-p-around_small">
+      <div class="wrapper">
+        <div class="skills jsskill">JS 80%</div>
+      </div>
+    </div>
+  </lightning-card>
 </template>

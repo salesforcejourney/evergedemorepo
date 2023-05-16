@@ -1,3 +1,4 @@
+@import "c/cssLibrary";
 p {
   color: red;
   font-size: 20px;
@@ -9,6 +10,31 @@ p {
 }
 
 .lwc:hover {
-  color: rgb(29, 199, 32);
+  color: rgb(26, 198, 32);
   font-size: larger;
+}
+
+.designTokenDemo {
+  color: var(--lwc-brandAccessible);
+  background: var(--lwc-colorBackgroundAltInverse);
+}
+
+.auraDesignTokenDemo {
+  color: var(--c-myTextColor);
+  background: var(--c-myBackGroundColor);
+}
+
+.styleHookDemo {
+  --slds-c-button-brand-color-background: var(--c-myBackGroundColor);
+  --slds-c-button-brand-color-background-hover: var(--c-myBackGroundColor);
+  --slds-c-button-brand-color-background-active: var(--c-myBackGroundColor);
+}
+
+.cssskill {
+  width: 80%;
+  background-color: blueviolet;
+}
+.jsskill {
+  width: 70%;
+  background-color: red;
 }

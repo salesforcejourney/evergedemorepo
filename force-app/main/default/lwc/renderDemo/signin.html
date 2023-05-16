@@ -1,0 +1,24 @@
+<template>
+  <lightning-card title="Signin Template" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        placeholder="Username"
+        label="Enter Username"
+      ></lightning-input>
+      <lightning-input
+        placeholder="Email"
+        label="Enter Email"
+      ></lightning-input>
+    </div>
+    <lightning-button
+      label="back"
+      onclick={clickHandler}
+      variant="brand"
+    ></lightning-button>
+    <lightning-button
+      label="Signin"
+      onclick={submitHandler}
+      variant="brand"
+    ></lightning-button>
+  </lightning-card>
+</template>

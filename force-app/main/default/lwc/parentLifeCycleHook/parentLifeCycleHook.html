@@ -1,0 +1,28 @@
+<template>
+  <lightning-card title="Life Cycle Hooks" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Add Component"
+        class="slds-var-m-around_small"
+        variant="brand"
+        onclick={addHandler}
+      ></lightning-button>
+      <lightning-button
+        label="Remove Component"
+        class="slds-var-m-around_small"
+        variant="brand"
+        onclick={removekHandler}
+      ></lightning-button>
+    </div>
+    <!-- <template lwc:if={addComponent}>
+      <c-child-lifecycle-hook></c-child-lifecycle-hook>
+    </template> -->
+    <template lwc:if={addComponent}>
+      <template for:each={myArray} for:item="arrItem">
+        <p key={arrItem}>
+          <c-child-lifecycle-hook></c-child-lifecycle-hook>
+        </p>
+      </template>
+    </template>
+  </lightning-card>
+</template>
