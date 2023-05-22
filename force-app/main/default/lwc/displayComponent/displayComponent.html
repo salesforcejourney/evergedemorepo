@@ -1,0 +1,27 @@
+<template>
+  <lightning-card title="Display Account" icon-name="custom:custom14">
+    <template lwc:if={selectedRecord}>
+      <div
+        class="slds-var-p-around_small slds-text-heading_large slds-text-align_center"
+      >
+        {selectedRecord.Name}
+      </div>
+    </template>
+    <div class="slds-var-p-around_small">
+      <template lwc:if={accounts.data}>
+        <div class="slds-grid slds-wrap">
+          <template for:each={accounts.data} for:item="account">
+            <div key={account.Id} class="slds-col slds-size_4-of-12">
+              <c-tile-component
+                accountrec={account}
+                onselect={selectHandler}
+              ></c-tile-component>
+            </div>
+          </template>
+        </div>
+      </template>
+
+      <template lwc:if={accounts.error}> {accounts.error} </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,64 @@
+<template>
+  <lightning-card
+    title="Object API Adapters - getObjectInfo"
+    icon-name="custom:custom14"
+  >
+    <template lwc:if={accountobjectinfo}>
+      <div class="slds-var-p-around_small">
+        <p>Account API Name : {accountobjectinfo.apiName}</p>
+        <p>Default Record Type : {accountobjectinfo.defaultRecordTypeId}</p>
+        <p>
+          API Name of Account Number :
+          {accountobjectinfo.fields.AccountNumber.apiName }
+        </p>
+      </div>
+    </template>
+    <template lwc:if={accountobjecterror}>
+      <p>{accountobjecterror}</p>
+    </template>
+  </lightning-card>
+  <lightning-card
+    title="Object API Adapters - getObjectInfos"
+    icon-name="custom:custom14"
+  >
+    <template lwc:if={objectinfosdata}>
+      <template for:each={objectinfosdata.results} for:item="objectinfo">
+        <div key={objectinfo.result.apiName} class="slds-var-p-around_small">
+          <p>API Name : {objectinfo.result.apiName}</p>
+          <p>Record Type : {objectinfo.result.defaultRecordTypeId}</p>
+        </div>
+      </template>
+    </template>
+    <template lwc:if={objectinfoserror}> {objectinfoserror} </template>
+  </lightning-card>
+  <lightning-card
+    title="Object API Adapters - getPicklistValues"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-p-around_small">
+      <lightning-combobox
+        label="Industry"
+        options={industryOptions}
+        onchange={changeHandler}
+      ></lightning-combobox>
+      <p>Selected Industry : {selectedIndustry}</p>
+    </div>
+  </lightning-card>
+  <lightning-card
+    title="Object API Adapters - getPicklistValuesByRecordType"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-p-around_small">
+      <lightning-combobox
+        label="Rating"
+        options={ratingOptions}
+        placeholder="Select Rating"
+      ></lightning-combobox>
+      <lightning-combobox
+        label="Type"
+        options={typeOptions}
+        placeholder="Select Type"
+      ></lightning-combobox>
+    </div>
+  </lightning-card>
+</template>

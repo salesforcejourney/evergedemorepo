@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="Wire Decorator with param" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Search Account By Industry"
+        onchange={changeHandler}
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <template lwc:if={accounts.data}>
+        <div class="slds-var-m-around_small">
+          <div style="height: 300px">
+            <lightning-datatable
+              key-field="id"
+              data={accounts.data}
+              columns={columns}
+            >
+            </lightning-datatable>
+          </div>
+        </div>
+      </template>
+      <template lwc:if={accounts.error}> {accounts.error} </template>
+    </div>
+  </lightning-card>
+</template>

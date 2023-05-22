@@ -1,0 +1,71 @@
+<template>
+  <lightning-card
+    title="Lightning Record Form to Readonly Record - Fields"
+    icon-name="custom:custom14"
+  >
+    <!--How to understand the component is in create mode : if you are not passing record Id attribute or record Id is incorrect-->
+    <lightning-record-form
+      class="slds-var-p-around_small"
+      object-api-name={accObject}
+      fields={fieldList}
+      columns="2"
+      record-id={recordId}
+      mode="readonly"
+    ></lightning-record-form>
+  </lightning-card>
+  <lightning-card
+    title="Lightning Record Form to View Record - Fields"
+    icon-name="custom:custom14"
+  >
+    <!--How to understand the component is in create mode : if you are not passing record Id attribute or record Id is incorrect-->
+    <lightning-record-form
+      class="slds-var-p-around_small"
+      object-api-name={accObject}
+      fields={fieldList}
+      columns="2"
+      record-id={recordId}
+      mode="view"
+    ></lightning-record-form>
+  </lightning-card>
+  <lightning-card
+    title="Lightning Record Form to Edit Record - Fields"
+    icon-name="custom:custom14"
+  >
+    <!--How to understand the component is in create mode : if you are not passing record Id attribute or record Id is incorrect-->
+    <lightning-record-form
+      class="slds-var-p-around_small"
+      object-api-name={accObject}
+      fields={fieldList}
+      columns="2"
+      record-id={recordId}
+      mode="edit"
+    ></lightning-record-form>
+  </lightning-card>
+  <lightning-card
+    title="Lightning Record Form to Create Record - Fields"
+    icon-name="custom:custom14"
+  >
+    <!--How to understand the component is in create mode : if you are not passing record Id attribute or record Id is incorrect-->
+    <lightning-record-form
+      class="slds-var-p-around_small"
+      object-api-name={accObject}
+      fields={fieldList}
+      columns="2"
+      onsuccess={successHandler}
+      onerror={errorHandler}
+    ></lightning-record-form>
+  </lightning-card>
+
+  <lightning-card
+    title="Lightning Record Form to Create Record - Full Layout"
+    icon-name="custom:custom14"
+  >
+    <!--How to understand the component is in create mode : if you are not passing record Id attribute or record Id is incorrect-->
+    <lightning-record-form
+      class="slds-var-p-around_small"
+      object-api-name={accObject}
+      layout-type="Compact"
+      columns="2"
+    ></lightning-record-form>
+  </lightning-card>
+</template>

@@ -1,0 +1,26 @@
+<template>
+  <lightning-card title="Update Record Adapter" icon-name="custom:custom14">
+    <div class="slds-var-p-around_small">
+      <lightning-input
+        label="Account Name"
+        onchange={changeHandler}
+        required="true"
+        value={accountName}
+        message-when-value-missing="Account Name is Mandatory"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning-button
+        label="Update Account Name"
+        variant="brand"
+        onclick={clickHanlder}
+      ></lightning-button>
+      <lightning-button
+        class="slds-var-p-around_small"
+        label="Delete Record"
+        variant="destructive"
+        onclick={deleteHanlder}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

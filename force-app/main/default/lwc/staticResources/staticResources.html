@@ -5,4 +5,19 @@
         <p>isGuest : {isGuest}</p>
     </div>
    </lightning-card> 
+   <lightning-card title="Custom Label" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+        <p>Welcome message from Label LWC : {welcomeLabelLwc}</p>
+        <p>Welcome message from Label JS : {importedLabel.welcomeLabelJs}</p>
+        <p>Welcome message from Label Apex : {importedLabel.welcomeLabelApex}</p>
+    </div>
+</lightning-card>
+   <lightning-card title="Static Images" icon-name="custom:custom14">
+    <img src = {evergeLogo} alt="Everge Logo">
+   </lightning-card>
+   <lightning-card title="Third Party JS" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+        <p>{currentDate}</p>
+    </div>
+   </lightning-card>
 </template>

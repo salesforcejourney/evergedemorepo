@@ -1,0 +1,35 @@
+<template>
+  <lightning-card
+    title="Contact Quick Update - notifyRecordUpdateAvailableDemo"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning-input
+        label="Firstname"
+        value={firstname}
+        onchange={changeHandler}
+        name="fname"
+      ></lightning-input>
+      <lightning-input
+        label="Lastname"
+        value={lastname}
+        onchange={changeHandler}
+        name="lname"
+        required="true"
+      ></lightning-input>
+      <lightning-input
+        label="Email"
+        value={email}
+        onchange={changeHandler}
+        name="email"
+      ></lightning-input>
+    </div>
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Update Contact"
+        onclick={updateHandler}
+        variant="brand"
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

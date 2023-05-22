@@ -1,0 +1,61 @@
+<template>
+  <lightning-card
+    title="Load Accounts using Imperative Apex"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        label="Load Top Accounts"
+        variant="brand"
+        onclick={loadHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <template lwc:if={accountData}>
+        <div style="height: 300px">
+          <lightning-datatable
+            key-field="id"
+            data={accountData}
+            columns={columns}
+          >
+          </lightning-datatable>
+        </div>
+      </template>
+      <template lwc:if={accountError}> {accountError} </template>
+    </div>
+  </lightning-card>
+  <lightning-card title="Imperative Apex with Parameters">
+    <div class="slds-var-m-around_small">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_2-of-3">
+          <lightning-input
+            label="Search Account by Industry"
+            placeholder="Search Account by Industry"
+            variant="label-hidden"
+            onchange={changeHandler}
+          ></lightning-input>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+          <lightning-button
+            variant="brand"
+            label="Search Account"
+            onclick={searchHandler}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+    <div class="slds-var-m-around_small">
+      <template lwc:if={accountSearchData}>
+        <div style="height: 300px">
+          <lightning-datatable
+            key-field="id"
+            data={accountSearchData}
+            columns={columns}
+          >
+          </lightning-datatable>
+        </div>
+      </template>
+      <template lwc:if={accountSearchError}> {accountSearchError} </template>
+    </div>
+  </lightning-card>
+</template>

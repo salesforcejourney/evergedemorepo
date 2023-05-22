@@ -1,0 +1,12 @@
+<template>
+  <template lwc:if={accrecId}>
+    <lightning-card title="Account Detail" icon-name="custom:custom14">
+      <lightning-record-form
+        record-id={accrecId}
+        object-api-name="Account"
+        layout-type="Compact"
+        mode="readOnly"
+      ></lightning-record-form>
+    </lightning-card>
+  </template>
+</template>

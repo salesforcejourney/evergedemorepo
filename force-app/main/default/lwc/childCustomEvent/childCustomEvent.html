@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Child Component - custom Event">
+    <lightning-button
+      label="Send Details to Parent"
+      slot="actions"
+      variant="brand"
+      onclick={clickHandler}
+    ></lightning-button>
+    <div class="slds-var-p-around_small">
+      <p>Account Name : {accountrec.Name}</p>
+      <p>Account Industry : {accountrec.Industry}</p>
+      <p>Account Rating : {accountrec.Rating}</p>
+    </div>
+  </lightning-card>
+</template>

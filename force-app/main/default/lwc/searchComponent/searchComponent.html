@@ -1,0 +1,35 @@
+<template>
+  <lightning-card title="Search Accounts" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_5-of-12 slds-var-p-around_small">
+          <lightning-combobox
+            label="Industry"
+            variant="label-hidden"
+            placeholder="Select Industry"
+            options={industryOptions}
+            onchange={changeHandler}
+            name="industry"
+          ></lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_5-of-12 slds-var-p-around_small">
+          <lightning-combobox
+            label="Rating"
+            variant="label-hidden"
+            placeholder="Select Rating"
+            options={ratingOptions}
+            onchange={changeHandler}
+            name="rating"
+          ></lightning-combobox>
+        </div>
+        <div class="slds-col slds-size_2-of-12 slds-var-p-around_small">
+          <lightning-button
+            label="Search"
+            variant="brand"
+            onclick={clickHandler}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+  <lightning-card
+    title="Wire Property Demo with Apex"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-p-around_small">
+      <template lwc:if={accounts.data}>
+        <template for:each={accounts.data} for:item="account">
+          <p key={account.Id}>
+            {account.Name} -- {account.Industry} : {account.Rating}
+          </p>
+        </template>
+      </template>
+      <template lwc:if={accounts.error}> {accounts.error} </template>
+    </div>
+  </lightning-card>
+</template>

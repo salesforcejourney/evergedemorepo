@@ -1,0 +1,30 @@
+<template>
+  <lightning-card
+    title="Parent Component - custom Event"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_2-of-3">
+        <div class="slds-var-p-around_small">
+          <template lwc:if={accounts.data}>
+            <template for:each={accounts.data} for:item="account">
+              <c-child-custom-event
+                onselect={selectHandler}
+                key={account.Id}
+                accountrec={account}
+              ></c-child-custom-event>
+            </template>
+          </template>
+          <template lwc:if={accounts.error}> {accounts.error} </template>
+        </div>
+      </div>
+      <div class="slds-col slds-size_1-of-3">
+        <template lwc:if={selectedAccount}>
+          <p>Selected Account Name : {selectedAccount.Name}</p>
+          <p>Selected Account Industry : {selectedAccount.Industry}</p>
+          <p>Selected Account Rating : {selectedAccount.Rating}</p>
+        </template>
+      </div>
+    </div>
+  </lightning-card>
+</template>

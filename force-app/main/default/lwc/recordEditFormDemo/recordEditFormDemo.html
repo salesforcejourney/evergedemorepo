@@ -1,0 +1,85 @@
+<template>
+  <lightning-card
+    title="Record Edit form - To Edit record"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-p-around_small">
+      <lightning-record-edit-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+        onsuccess={editsuccesshandler}
+        onerror={editErrorHandler}
+        onsubmit={editsubmitHandler}
+      >
+        <lightning-output-field
+          field-name={accountObj.Name}
+        ></lightning-output-field>
+        <label class="slds-p-left_x-small">Enter Industry</label>
+        <lightning-input-field
+          variant="label-hidden"
+          field-name={accountObj.Industry}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accountObj.Type}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accountObj.Rating}
+        ></lightning-input-field>
+        <lightning-input
+          type="tel"
+          label="Phone"
+          onchange={changeHandler}
+          required="true"
+        ></lightning-input>
+        <div class="slds-var-p-around_small">
+          <lightning-button
+            label="Reset"
+            onclick={resetHandler}
+          ></lightning-button>
+          <lightning-button
+            label="Edit Record"
+            type="submit"
+            variant="destructive"
+            class="slds-var-p-around_small"
+          ></lightning-button>
+        </div>
+      </lightning-record-edit-form>
+    </div>
+  </lightning-card>
+  <lightning-card
+    title="Record Edit form - To create record"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-p-around_small">
+      <lightning-record-edit-form
+        object-api-name={objectApiName}
+        onsuccess={successHandler}
+      >
+        <lightning-input-field
+          field-name={accountObj.Name}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accountObj.Industry}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accountObj.Type}
+        ></lightning-input-field>
+        <lightning-input-field
+          field-name={accountObj.Rating}
+        ></lightning-input-field>
+        <div class="slds-var-p-around_small">
+          <lightning-button
+            label="Reset"
+            onclick={resetHandler}
+          ></lightning-button>
+          <lightning-button
+            label="Create Record"
+            type="submit"
+            variant="brand"
+            class="slds-var-p-around_small"
+          ></lightning-button>
+        </div>
+      </lightning-record-edit-form>
+    </div>
+  </lightning-card>
+</template>

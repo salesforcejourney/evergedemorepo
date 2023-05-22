@@ -1,0 +1,26 @@
+<template>
+  <lightning-card title="Refresh Apex Demo" icon-name="custom:custom14">
+    <div class="slds-var-m-around_small">
+      <lightning-button
+        variant="destructive"
+        label="Delete Record"
+        onclick={deleteHandler}
+      ></lightning-button>
+    </div>
+    <div class="slds-var-m-around_small">
+      <template lwc:if={accountData}>
+        <div style="height: 300px">
+          <lightning-datatable
+            key-field="id"
+            data={accountData}
+            columns={columns}
+            onrowselection={handleSelection}
+            max-row-selection="1"
+          >
+          </lightning-datatable>
+        </div>
+      </template>
+      <template lwc:if={accountError}> {accountError} </template>
+    </div>
+  </lightning-card>
+</template>

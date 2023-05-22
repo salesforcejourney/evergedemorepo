@@ -1,0 +1,16 @@
+{
+  "localizedLastName": "Jain",
+  "profilePicture": {
+    "displayImage": "urn:li:digitalmediaAsset:D5603AQFSvtW8E4H_iw"
+  },
+  "firstName": {
+    "localized": { "en_US": "Ankit" },
+    "preferredLocale": { "country": "US", "language": "en" }
+  },
+  "lastName": {
+    "localized": { "en_US": "Jain" },
+    "preferredLocale": { "country": "US", "language": "en" }
+  },
+  "id": "7pJI133v9q",
+  "localizedFirstName": "Ankit"
+}

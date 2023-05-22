@@ -1,0 +1,31 @@
+<template>
+  <lightning-card
+    title="Record Id and Object Api Name"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-p-around_small">
+      <p>{recordId}</p>
+      <p>{objectApiName}</p>
+    </div>
+  </lightning-card>
+  <lightning-card title="Navigation To Record Page" icon-name="custom:custom14">
+    <div class="slds-var-p-around_small">
+      <p>
+        <lightning-button
+          label="Edit Record"
+          variant="brand"
+          onclick={openRecordinEditMode}
+        ></lightning-button>
+      </p>
+    </div>
+    <div class="slds-var-p-around_small">
+      <p>
+        <lightning-button
+          label="View Record"
+          variant="brand"
+          onclick={openRecordinViewMode}
+        ></lightning-button>
+      </p>
+    </div>
+  </lightning-card>
+</template>

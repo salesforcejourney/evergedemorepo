@@ -1,0 +1,46 @@
+<template>
+  <lightning-card title="Create Record LDS Adapter" icon-name="custom:custom14">
+    <div class="slds-var-p-around_small">
+      <lightning-input
+        label="Firstname"
+        onchange={changeHandler}
+        name="fname"
+        min-length="2"
+        max-length="60"
+        message-when-too-short="Firstname minimum length of 2 char"
+        message-when-too-long="Firstname maximum length of 60 char"
+        class="inputval"
+      ></lightning-input>
+      <lightning-input
+        label="Lastname"
+        onchange={changeHandler}
+        name="lname"
+        required="true"
+        message-when-value-missing="Lastname is Mandatory"
+        class="inputval"
+      ></lightning-input>
+      <lightning-input
+        label="Email"
+        onchange={changeHandler}
+        name="email"
+        type="email"
+        class="inputval"
+        message-when-type-mismatch="Entered Email address is not in proper format"
+      ></lightning-input>
+      <lightning-combobox
+        label="LeadSource"
+        onchange={changeHandler}
+        name="leadsource"
+        options={leadSourceOptions}
+        class="inputval"
+      ></lightning-combobox>
+    </div>
+    <div class="slds-var-p-around_small">
+      <lightning-button
+        label="Create Record"
+        variant="brand"
+        onclick={clickHandler}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

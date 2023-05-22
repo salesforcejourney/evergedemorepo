@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title={accountrec.Name} icon-name="standard:account">
+    <lightning-button
+      label="Display"
+      slot="actions"
+      onclick={clickHandler}
+      variant="brand"
+    ></lightning-button>
+    <div class="slds-var-p-around_small">
+      <p>Industry : {accountrec.Industry}</p>
+      <p>Rating : {accountrec.Rating}</p>
+    </div>
+  </lightning-card>
+</template>

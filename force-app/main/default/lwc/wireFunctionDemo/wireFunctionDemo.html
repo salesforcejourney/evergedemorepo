@@ -1,0 +1,25 @@
+<template>
+  <lightning-card
+    title="Wire Decorator function with Apex"
+    icon-name="custom:custom14"
+  >
+    <div class="slds-var-m-around_small">
+      <!-- <template lwc:if={accountData}>
+        <template for:each={accountData} for:item="account">
+          <p key={account.Id}>
+            {account.Name} : {account.Industry} : {account.Rating}
+          </p>
+        </template>
+      </template> -->
+      <div style="height: 300px">
+        <lightning-datatable
+          key-field="id"
+          data={accountData}
+          columns={columns}
+        >
+        </lightning-datatable>
+      </div>
+      <template lwc:if={accountError}> {accountError} </template>
+    </div>
+  </lightning-card>
+</template>
